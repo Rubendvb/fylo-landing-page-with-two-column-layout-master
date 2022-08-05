@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 2.5rem;
+}
+
+.header__img {
+  width: 30%;
+  height: 30%;
+}
+
+.header__ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__ul li {
+  font-size: 0.75rem;
+  margin-left: 1rem;
+  color: var(--very-dark-blue);
+  font-family: var(--font-family-raleway);
+  font-weight: 400;
+}

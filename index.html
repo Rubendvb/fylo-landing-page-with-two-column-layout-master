@@ -15,13 +15,16 @@
 
     <link rel="stylesheet" href="assets/css/index/reset.css" />
     <link rel="stylesheet" href="assets/css/index/index.css" />
+    <link rel="stylesheet" href="assets/css/header/header.css" />
+    <link rel="stylesheet" href="assets/css/files/files.css" />
+    <link rel="stylesheet" href="assets/css/stay/stay.css" />
   </head>
   <body>
     <div>
-      <header>
-        <img src="assets/images/logo.svg" alt="" />
+      <header class="header container">
+        <img class="header__img" src="assets/images/logo.svg" alt="" />
         <nav>
-          <ul>
+          <ul class="header__ul">
             <li>Features</li>
             <li>Team</li>
             <li>Sign In</li>
@@ -31,32 +34,44 @@
     </div>
 
     <div>
-      <section>
-        <div>
-          <h1>All your files in one secure location, accessible anywhere.</h1>
-          <p>
+      <section class="files container">
+        <div class="files__store">
+          <h1 class="files__store-h1">
+            All your files in one secure location, accessible anywhere.
+          </h1>
+          <p class="files__store-paragraph">
             Fylo stores your most important files in one secure location. Access
             them wherever you need, share and collaborate with friends, family,
             and co-workers.
           </p>
 
           <div>
-            <form>
-              <input type="email" aria-label="Email" />
-              <button type="submit">Get Started</button>
+            <form class="files__form">
+              <input
+                class="files__form-input"
+                type="email"
+                placeholder="Enter your email..."
+              />
+              <button class="files__form-button" type="submit">
+                Get Started
+              </button>
             </form>
           </div>
         </div>
         <div>
-          <img src="assets/images/illustration-1.svg" alt="" />
+          <img
+            class="files__img"
+            src="assets/images/illustration-1.svg"
+            alt=""
+          />
         </div>
       </section>
     </div>
 
-    <div>
-      <section>
+    <div class="stayBg">
+      <section class="stay container">
         <div>
-          <h2>Stay productive, wherever you are</h2>
+          <h2 class="stay__h2">Stay productive, wherever you are</h2>
           <p>
             Never let location be an issue when accessing your files. Fylo has
             you covered for all of your file storage needs.

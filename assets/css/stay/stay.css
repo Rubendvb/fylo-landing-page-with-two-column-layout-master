@@ -1,0 +1,27 @@
+.stayBg {
+  margin-top: 6rem;
+  padding-top: 2.5rem;
+  background-image: url("/assets/images/bg-curve-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+.stay {
+  display: flex;
+  background-color: var(--light-grayish-blue);
+  flex-direction: column;
+}
+
+.stay__h2 {
+  font-size: 1rem;
+  font-family: var(--font-family-open-sans);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.stay div:nth-child(2) {
+  order: -1;
+}
