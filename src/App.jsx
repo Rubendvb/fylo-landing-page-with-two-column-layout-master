@@ -1,39 +1,103 @@
 import "./assets/styles/main.css";
+import logoImg from "./assets/images/logo.svg";
+import img1 from "./assets/images/illustration-1.svg";
+import { ListaHeader } from "./assets/components/ListaHeader/ListaHeader";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-red-700">Hello World!</h1>
-      <div>
-        Features Team Sign In All your files in one secure location, accessible
-        anywhere. Fylo stores your most important files in one secure location.
-        Access them wherever you need, share and collaborate with friends,
-        family, and co-workers. Get Started Stay productive, wherever you are
-        Never let location be an issue when accessing your files. Fylo has you
-        covered for all of your file storage needs. Securely share files and
-        folders with friends, family and colleagues for live collaboration. No
-        email attachments required! See how Fylo works Fylo has improved our
-        team productivity by an order of magnitude. Since making the switch our
-        team has become a well-oiled collaboration machine. Kyle Burton Founder
-        & CEO, Huddle Get early access today It only takes a minute to sign up
-        and our free starter tier is extremely generous. If you have any
-        questions, our support team would be happy to help you. Get Started For
-        Free Phone: +1-543-123-4567 example@fylo.com About Us Jobs Press Blog
-        Contact Us Terms Privacy
-        <footer>
-          <p class="attribution">
-            Challenge by
-            <a
-              href="https://www.frontendmentor.io?ref=challenge"
-              target="_blank"
-            >
-              Frontend Mentor
-            </a>
-            . Coded by <a href="#">Your Name Here</a>.
+    <>
+      <header className="flex justify-between">
+        <img className="w-36 h-12" src={logoImg} alt="" />
+
+        <ul className="flex items-center">
+          <ListaHeader text={"Features"} />
+          <ListaHeader text={"Team"} />
+          <ListaHeader text={"Sign In"} />
+        </ul>
+      </header>
+
+      <section className="flex flex-col">
+        <div>
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p>
+            Fylo stores your most important files in one secure location. Access
+            them wherever you need, share and collaborate with friends, family,
+            and co-workers.
           </p>
-        </footer>
-      </div>
-    </div>
+          <div>
+            <button>Get Started</button>
+            <input type="text" />
+          </div>
+        </div>
+
+        <div className="order-first max-w-full mt-36">
+          <img src={img1} alt="" />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <div>
+            <h2>Stay productive, wherever you are</h2>
+            <p>
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <p>
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required!
+            </p>
+            <a href="#">See how Fylo works</a>
+          </div>
+          <div>
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+            <div>
+              <img src="" alt="" />
+              <div>
+                <span>Kyle Burton</span>
+                <span>Founder & CEO, Huddle</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="" alt="" />
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h3>Get early access today</h3>
+          <p>
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+        </div>
+        <div>
+          <input type="text" />
+          <button>Get Started For Free</button>
+        </div>
+      </section>
+      <section>
+        Phone: +1-543-123-4567 example@fylo.com About Us Jobs Press Blog Contact
+        Us Terms Privacy
+      </section>
+
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor
+          </a>
+          . Coded by <a href="#">Your Name Here</a>.
+        </p>
+      </footer>
+    </>
   );
 }
 
