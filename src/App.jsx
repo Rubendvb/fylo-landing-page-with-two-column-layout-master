@@ -2,6 +2,9 @@ import "./assets/styles/main.css";
 import logoImg from "./assets/images/logo.svg";
 import img1 from "./assets/images/illustration-1.svg";
 import { ListaHeader } from "./assets/components/ListaHeader/ListaHeader";
+import { Titulo } from "./assets/components/Titulo/Titulo";
+import { Paragrafo } from "./assets/components/Paragrafo/Paragrafo";
+import { Form } from "./assets/components/Form/Form";
 
 function App() {
   return (
@@ -18,16 +21,19 @@ function App() {
 
       <section className="flex flex-col">
         <div>
-          <h1>All your files in one secure location, accessible anywhere.</h1>
-          <p>
-            Fylo stores your most important files in one secure location. Access
-            them wherever you need, share and collaborate with friends, family,
-            and co-workers.
-          </p>
-          <div>
-            <button>Get Started</button>
-            <input type="text" />
-          </div>
+          <Titulo
+            title={
+              "All your files in one secure location, accessible anywhere."
+            }
+          />
+
+          <Paragrafo
+            paragrafo={
+              "Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers."
+            }
+          />
+
+          <Form textButton={"Get Started"} />
         </div>
 
         <div className="order-first max-w-full mt-36">
