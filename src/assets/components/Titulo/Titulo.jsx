@@ -1,6 +1,12 @@
 export function Titulo(props) {
   return (
-    <h1 className="my-12 text-[#070439] font-bold text-[2.1rem] text-center font-opensans">
+    <h1
+      className={`font-bold text-center font-opensans ${
+        props.titleNumber === 1
+          ? "mt-12 mb-8 text-[#070439] text-2xl"
+          : "text-base mb-8 font-raleway"
+      }`}
+    >
       {props.title}
     </h1>
   );
