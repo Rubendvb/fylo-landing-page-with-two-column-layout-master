@@ -1,9 +1,12 @@
+import { React } from "react";
 import "./assets/styles/main.css";
 
 import logoImg from "./assets/images/logo.svg";
 import img1 from "./assets/images/illustration-1.svg";
 import img2 from "./assets/images/illustration-2.svg";
 import arrow from "./assets/images/icon-arrow.svg";
+import quotes from "./assets/images/icon-quotes.svg";
+import avatar from "./assets/images/avatar-testimonial.jpg";
 
 import { ListaHeader } from "./assets/components/ListaHeader/ListaHeader";
 import { Titulo } from "./assets/components/Titulo/Titulo";
@@ -39,7 +42,7 @@ function App() {
             paragrafoNumber={1}
           />
 
-          <Form textButton={"Get Started"} />
+          <Form textButton={"Get Started"} textButtonNumber={1} />
         </div>
 
         <div className="order-first max-w-full mt-36">
@@ -47,7 +50,7 @@ function App() {
         </div>
       </section>
 
-      <section className="bg-[hsl(240,75%,98%)] flex flex-col">
+      <section className="bg-[hsl(240,75%,98%)] flex flex-col pb-14">
         <div className="px-6">
           <div className="pt-20 flex flex-col">
             <Titulo
@@ -69,22 +72,29 @@ function App() {
             />
 
             <div
-              className={`self-center text-xs text-[hsl(170,45%,43%)] border-b-2 border-[hsl(170,45%,43%)]`}
+              className={`self-center text-xs text-[hsl(170,45%,43%)] border-b-[1px] border-[hsl(170,45%,43%)] flex flex-row py-1 mb-12`}
             >
               <a href="#">See how Fylo works</a>
+              <img src={arrow} alt="" className="ml-1" />
             </div>
           </div>
-          <div>
-            <p>
+
+          <div className="bg-white m-6 p-4 drop-shadow-lg">
+            <img src={quotes} alt="" className="mb-3" />
+            <p className="text-[10px] font-opensans font-normal leading-5 tracking-wider mb-4 text-[hsl(243,87%,12%)]">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled
               collaboration machine.
             </p>
-            <div>
-              <img src="" alt="" />
-              <div>
-                <span>Kyle Burton</span>
-                <span>Founder & CEO, Huddle</span>
+            <div className="flex flex-row text-[hsl(243,87%,12%)] font-opensans">
+              <img src={avatar} alt="" className="w-6 h-6 rounded-full mr-2" />
+              <div className="flex flex-col">
+                <span className="text-[10px] font-bold tracking-wider">
+                  Kyle Burton
+                </span>
+                <span className="text-[8px] opacity-70 tracking-tighter">
+                  Founder & CEO, Huddle
+                </span>
               </div>
             </div>
           </div>
@@ -95,18 +105,19 @@ function App() {
         </div>
       </section>
 
-      <section>
-        <div>
-          <h3>Get early access today</h3>
-          <p>
+      <section className="bg-[hsl(238,22%,44%)] pb-16">
+        <div className="text-center">
+          <h3 className="pt-14 text-[hsl(240,75%,98%)] font-raleway font-bold text-lg mb-5">
+            Get early access today
+          </h3>
+          <p className="text-[hsl(240,75%,98%)] text-sm px-12 mb-6">
             It only takes a minute to sign up and our free starter tier is
             extremely generous. If you have any questions, our support team
             would be happy to help you.
           </p>
         </div>
-        <div>
-          <input type="text" />
-          <button>Get Started For Free</button>
+        <div className="px-16">
+          <Form textButton={"Get Started For Free"} textButtonNumber={2} />
         </div>
       </section>
       <section>
