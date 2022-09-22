@@ -4,10 +4,10 @@ export function Form(props) {
       <label className="flex flex-col max-w-full">
         <input
           type="email"
-          className={`border-solid border-[1px] p-2 mb-4 drop-shadow-md placeholder:text-gray-300 font-opensans ${
+          className={`border-solid border-[1px] p-2 drop-shadow-md placeholder:text-gray-300 font-opensans ${
             props.textButtonNumber === 1
-              ? "border-[#070439] pl-8 text-sm rounded"
-              : "border-none text-[10px] rounded-sm"
+              ? "border-[#070439] pl-8 text-sm rounded mb-4"
+              : "border-none text-[10px] rounded-sm mb-2"
           } `}
           placeholder={`${
             props.textButtonNumber === 1
@@ -17,10 +17,10 @@ export function Form(props) {
         />
         <button
           type="submit"
-          className={`bg-blue-500 text-white font-bold font-raleway p-2 drop-shadow-md ${
+          className={`bg-blue-500 text-white font-bold font-raleway drop-shadow-md ${
             props.textButtonNumber === 1
-              ? "rounded text-sm"
-              : "rounded-sm text-xs"
+              ? "rounded text-sm p-[10px]"
+              : "rounded-sm text-xs p-2"
           } `}
         >
           {props.textButton}

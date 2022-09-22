@@ -1,4 +1,9 @@
-import { React } from "react";
+import {
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaInstagramSquare,
+} from "react-icons/fa";
+
 import "./assets/styles/main.css";
 
 import logoImg from "./assets/images/logo.svg";
@@ -7,6 +12,8 @@ import img2 from "./assets/images/illustration-2.svg";
 import arrow from "./assets/images/icon-arrow.svg";
 import quotes from "./assets/images/icon-quotes.svg";
 import avatar from "./assets/images/avatar-testimonial.jpg";
+import phone from "./assets/images/icon-phone.svg";
+import email from "./assets/images/icon-email.svg";
 
 import { ListaHeader } from "./assets/components/ListaHeader/ListaHeader";
 import { Titulo } from "./assets/components/Titulo/Titulo";
@@ -72,7 +79,7 @@ function App() {
             />
 
             <div
-              className={`self-center text-xs text-[hsl(170,45%,43%)] border-b-[1px] border-[hsl(170,45%,43%)] flex flex-row py-1 mb-12`}
+              className={`self-center text-xs text-[hsl(170,45%,43%)] border-b-[1px] border-[hsl(170,45%,43%)] flex flex-row py-1 mb-8 mt-4`}
             >
               <a href="#">See how Fylo works</a>
               <img src={arrow} alt="" className="ml-1" />
@@ -110,28 +117,88 @@ function App() {
           <h3 className="pt-14 text-[hsl(240,75%,98%)] font-raleway font-bold text-lg mb-5">
             Get early access today
           </h3>
+
           <p className="text-[hsl(240,75%,98%)] text-sm px-12 mb-6">
             It only takes a minute to sign up and our free starter tier is
             extremely generous. If you have any questions, our support team
             would be happy to help you.
           </p>
         </div>
+
         <div className="px-16">
           <Form textButton={"Get Started For Free"} textButtonNumber={2} />
         </div>
       </section>
-      <section>
-        Phone: +1-543-123-4567 example@fylo.com About Us Jobs Press Blog Contact
-        Us Terms Privacy
+
+      <section className="flex flex-col bg-[hsl(243,87%,12%)] px-12 text-white font-opensans text-sm">
+        <img src={logoImg} alt="" className="pt-16 pb-14 w-40" />
+
+        <div className="flex flex-col mb-12">
+          <div className="flex flex-row items-center mb-5">
+            <img src={phone} alt="" />
+            <span className="ml-4">Phone: +1-543-123-4567</span>
+          </div>
+
+          <div className="flex flex-row items-center">
+            <img src={email} alt="" />
+            <span className="ml-4">example@fylo.com</span>
+          </div>
+        </div>
+
+        <div>
+          <ul>
+            <li className="mb-4">
+              <a href="#">About Us</a>
+            </li>
+
+            <li className="mb-4">
+              <a href="#">Jobs</a>
+            </li>
+
+            <li className="mb-4">
+              <a href="#">Press</a>
+            </li>
+
+            <li className="mb-4">
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="my-12">
+          <ul>
+            <li className="mb-4">
+              <a href="#">Contact Us</a>
+            </li>
+
+            <li className="mb-4">
+              <a href="#">Terms</a>
+            </li>
+
+            <li className="mb-4">
+              <a href="#">Privacy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="self-center flex flex-row ">
+          <FaFacebookSquare size={22} className="mr-2" />
+          <FaTwitterSquare size={22} className="mr-2" />
+          <FaInstagramSquare size={22} />
+        </div>
       </section>
 
-      <footer>
-        <p class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+      <footer className="bg-[hsl(243,87%,12%)] p-12 text-white font-opensans text-xs">
+        <p className="text-center">
+          Challenge by{" "}
+          <a
+            className="underline"
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+          >
             Frontend Mentor
           </a>
-          . Coded by <a href="#">Your Name Here</a>.
+          . Coded by <a href="#">Rubén</a>.
         </p>
       </footer>
     </>
