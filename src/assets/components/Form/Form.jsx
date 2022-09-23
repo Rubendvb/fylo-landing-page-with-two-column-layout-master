@@ -1,7 +1,7 @@
 export function Form(props) {
   return (
     <form>
-      <label className="flex flex-col max-w-full">
+      <label className="flex flex-col">
         <input
           type="email"
           className={`border-solid border-[1px] p-2 drop-shadow-md placeholder:text-gray-300 font-opensans ${
