@@ -41,7 +41,7 @@ export function Form(props) {
         {errors.emailInput && (
           <span
             className={`${
-              props.textButtonNumber === 2 ? "block" : "absolute"
+              props.textButtonNumber === 2 ? "block" : "md:absolute mb-2"
             } top-12 text-xs text-pink-500 peer-invalid:visible`}
           >
             Please check your email
